@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Boxes SDK</title>
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">The Boxes</a>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#viewer">Box Viewer</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="https://discord.gg/your-server" target="_blank">Discord</a></li>
+        <li><a href="https://theboxes.example.com/play" class="btn play-btn">Play Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Metro‑style Tile Grid -->
+  <div class="tile-grid">
+    <a href="#viewer" class="tile tile-medium">Box Viewer</a>
+    <a href="#faq" class="tile tile-small">FAQ</a>
+    <a href="#feedback" class="tile tile-small">Feedback</a>
+    <a href="https://discord.gg/your-server" target="_blank" class="tile tile-medium">Discord</a>
+    <a href="https://theboxes.example.com/play" target="_blank" class="tile tile-large play-tile">Play Now</a>
+  </div>
+
+  <!-- Sections as before... -->
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h5>These are just pre fitted questions, I will import the questions you have from feedback/repo issues.</h5>
+    <div class="faq-item">
+      <h3>What is The Boxes?</h3>
+      <p>An open‑source SDK focused on cube interactions—pick up, stack, and play.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I get started?</h3>
+      <p>Clone our GitHub repo, import into Unity, and hit play!</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I customize the cubes?</h3>
+      <p>Yes—textures, sizes, physics parameters are all exposed in the API.</p>
+    </div>
+  </section>
+
+  <!-- Box Viewer Section -->
+  <section id="viewer" class="viewer">
+    <h2>Box Viewer</h2>
+    <iframe
+      src="https://your-box-viewer.example.com/embed"
+      title="Box Viewer"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback" class="feedback">
+    <h2>Feedback</h2>
+    <p>Have suggestions or ran into a bug? Let us know!</p>
+    <a href="mailto:feedback@theboxes.example.com" class="btn feedback-btn">Send Feedback</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 The Boxes. Open Source under MIT License.</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

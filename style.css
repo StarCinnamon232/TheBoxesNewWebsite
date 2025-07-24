@@ -1,0 +1,84 @@
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Metro Color Palette */
+:root {
+  --primary: #0083ab;          /* Windows 8.1 turquoise */
+  --primary-dark: #00667f;     /* darker for hovers */
+  --tile-bg: #e0f7fa;
+  --text-dark: #222;
+}
+
+/* Header & Nav */
+.site-header { background: var(--primary); }
+.navbar {
+  max-width: 1024px;
+  margin: auto; padding: 1rem;
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+.logo { color: #fff; font-size: 1.5rem; text-decoration: none; }
+.nav-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: #fff; }
+.nav-links { list-style: none; display: flex; gap: 1rem; }
+.nav-links a { color: #fff; text-decoration: none; padding: 0.5rem; }
+.btn.play-btn { background: #fff; color: var(--primary); border-radius: 2px; }
+
+/* Tile Grid */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 1rem auto;
+}
+.tile {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--tile-bg);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 2px;
+  min-height: 80px;
+}
+.tile-small { font-size: 0.875rem; }
+.tile-medium { font-size: 1rem; }
+.tile-large { font-size: 1.25rem; grid-column: span 2; }
+.play-tile { background: var(--primary); color: #fff; }
+
+/* Section Headings */
+section h2 { text-align: center; margin: 2rem 0 1rem; color: var(--text-dark); }
+
+/* FAQ */
+.faq { max-width: 800px; margin: auto; padding: 0 1rem; }
+.faq-item { background: #fff; border-left: 4px solid var(--primary); padding: 1rem; margin-bottom: 1rem; }
+
+/* Viewer */
+.viewer iframe { width: 100%; height: 400px; border: none; border-radius: 2px; }
+
+/* Feedback */
+.feedback { text-align: center; padding: 2rem 1rem; }
+.feedback-btn { display: inline-block; margin-top: 0.5rem; }
+
+/* Footer */
+.site-footer { text-align: center; padding: 1rem; background: var(--primary); color: #fff; font-size: 0.875rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 64px; right: 0;
+    background: var(--primary);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .nav-links.nav-open { transform: translateX(0); }
+  .nav-links li { margin: 1rem 0; }
+}
